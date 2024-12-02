@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Comprehensive Government Portal</title>
+    <style>
+        :root {
+            --primary-color: #0f3057;
+            --secondary-color: #00a4cc;
+            --accent-color: #00bf72;
+            --background-light: #f4f7f6;
+            --text-color: #333;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-light);
+            color: var(--text-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .logo {
+            font-size: 33px;
+            display: flex
+        ;
+            align-items: center;
+            font-weight: bold;
+            margin-left: 244px;
+        }
+        .nav-links {
+            margin-right: -44px;
+            margin-top: -128px;
+            display: flex
+        ;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        /* Sections */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+        }
+        /* Services Grid */
+        #services {
+            background-color: pink;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--background-light);
+            padding: 2rem;
+
+
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+        }
+        /* Department Section */
+        #departments {
+            background-color: var(--background-light);
+            background: greenyellow;
+        }
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .department-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        /* Projects Section */
+        #projects {
+            background-color: rgb(148, 81, 144);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        /* Citizen Engagement */
+        #engagement {
+            background-color: var(--secondary-color);
+            color: rgb(41, 15, 124);
+        }
+        .dfd{
+            background-color: #fdf7efd4;
+            border-radius: 5px;
+        }
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        /* Responsive Design */
+        @media screen and (max-width: 1200px) {
+            .services-grid, .departments-grid, .projects-grid, .engagement-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .services-grid, .departments-grid, .projects-grid, .engagement-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <img src="images/image1.png">
+        <div class="logo">GOVERMENT OF INDIA</div>
+       
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#engagement">Engage</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>Welcome to India </h1>
+            <p>Connecting citizens, delivering services, building community</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Our Key Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Education and Learning.</h3>
+                    <p>MINISTRY OF EDUCATION</p>
+                </div>
+                <div class="service-card">
+                    <h3>Health and Wellness.</h3>
+                    <p>MINISTRY OF HEALTH AND WELNESS</p>
+                </div>
+                <div class="service-card">
+                    <h3>Electricity, Water and Local services.</h3>
+                    <p>MINISTRY OF POWER AND RESOURCE MANAGEMENT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Our Departments</h2>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <h3>Civil Services</h3>
+                    <p>Administrative services</p>
+                </div>
+                <div class="department-card">
+                    <h3>Public Works</h3>
+                    <p>Infrastructure maintenance</p>
+                </div>
+                <div class="department-card">
+                    <h3>Parks & Recreation</h3>
+                    <p>Community programs</p>
+                </div>
+                <div class="department-card">
+                    <h3>Economic Development</h3>
+                    <p>Business growth initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Current  Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>SWACHHA BHARAT ABHIYAN</h3>
+                    <p>Clean India Green India</p>
+                </div>
+                <div class="project-card">
+                    <h3>SMART CITY </h3>
+                    <p>Sustainable city development initiatives</p>
+                </div>
+                <div class="project-card">
+                    <h3>National Projects</h3>
+                    <p>Make India Grow and Lead </p>
+                </div>
+                <div class="project-card">
+                    <h3>UNNAT BHARAT ABHIYAN</h3>
+                    <p>A flagship event for education of indian students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citizen Engagement Section -->
+    <section id="engagement">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Community Engagement</h2>
+            <div class="engagement-grid">
+                <div class="dfd">
+                    <h3>Digital India</h3>
+                    <p>Make India Digital by Ai and technology</p>
+                </div>
+                <div class="dfd">
+                    <h3>NMAMI GANGA</h3>
+                    <p>Clean Ganga River and make it green to make soul enriched with humour</p>
+                </div>
+                <div class="dfd">
+                    <h3>AYUSHMAAN  BHARAT YOJNA</h3>
+                    <p>To make India medical more easy to work for welfare of people</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+            <img src="images/image.png">
+            <p>© 2024 Azadi Ka Amrit Mahotsav,Goverment Of India</p>
+          
+            <span> Made By-ABHIJIT RANJAN</span>
+        </div>
+    </footer>
+</body>
+</html>
